@@ -16,7 +16,7 @@ namespace RiotStatsAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -45,6 +45,55 @@ namespace RiotStatsAPI.Migrations
                         .IsUnique();
 
                     b.ToTable("Accounts");
+                });
+
+            modelBuilder.Entity("RiotStatsAPI.Models.Entities.Matches", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("AccountId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Assists")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ChampionLevel")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ChampionName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Deaths")
+                        .HasColumnType("int");
+
+                    b.Property<long>("GameCreation")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("GameDuration")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("GameId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GameMode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Kills")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Win")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Matches");
                 });
 
             modelBuilder.Entity("RiotStatsAPI.Models.Entities.Summoner", b =>

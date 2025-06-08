@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using RiotApiStats.Models.DTOs;
 
 namespace RiotStatsAPI.Models.DTOs
 {
@@ -27,14 +28,11 @@ namespace RiotStatsAPI.Models.DTOs
         [JsonProperty("mapId")]
         public int MapId { get; set; }
         [JsonProperty("participants")]
-        public List<ParticipantDto> Participants { get; set; }
+        public List<ParticipantDTO> Participants { get; set; }
         [JsonProperty("platformId")]
         public string PlatformId { get; set; }
         [JsonProperty("queueId")]
         public string QueueId { get; set; }
-        [JsonProperty("teams")]
-        public List<TeamDto> Teams { get; set; }
-        [JsonProperty("tournamentCode")]
-        public string TournamentCode { get; set; }
+        
     }
 }

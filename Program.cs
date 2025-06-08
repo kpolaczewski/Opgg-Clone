@@ -4,8 +4,7 @@ using RiotStatsAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddOpenApi();  // Adds OpenAPI for documentation
+
 
 // Add CORS policy to allow frontend
 builder.Services.AddCors(options =>
@@ -22,6 +21,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Add controllers (API routes)
 builder.Services.AddControllers();
+builder.Services.AddRazorPages();
+
 
 
 var apiKey = builder.Configuration["RiotApi:ApiKey"];
@@ -39,16 +40,13 @@ builder.Services.AddTransient<RiotApiService>(sp =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();  // OpenAPI in development
-}
+
 
 app.UseHttpsRedirection();  // Enforces HTTPS
 app.UseCors("AllowFrontend");  // Apply the CORS policy
 
 // Map controllers (this will expose your API routes)
 app.MapControllers();  // This is required for API routes
+app.MapRazorPages();
 
 app.Run();

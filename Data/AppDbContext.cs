@@ -27,5 +27,7 @@ namespace RiotStatsAPI.Data
         }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Summoner> Summoners { get; set; }
+
+        public DbSet<Matches> Matches { get; set; }
     }
 }

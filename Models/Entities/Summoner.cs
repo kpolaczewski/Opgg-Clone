@@ -10,14 +10,19 @@ namespace RiotStatsAPI.Models.Entities
 
         [JsonProperty("encryptedAccountId")]
         public string EncryptedAccountId { get; set; }
+
         [JsonProperty("profileIconId")]
         public int ProfileIconId { get; set; }
+
         [JsonProperty("revisionDate")]
         public long RevisionDate { get; set; }
+
         [JsonProperty("id")]
         public string SummonerId { get; set; }
+
         [JsonProperty("puuid")]
         public string Puuid { get; set; }
+
         [JsonProperty("summonerLevel")]
         public long SummonerLevel { get; set; }
     }

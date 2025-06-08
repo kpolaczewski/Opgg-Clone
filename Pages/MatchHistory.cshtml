@@ -1,0 +1,181 @@
+﻿@page
+@model MatchHistoryModel
+@{
+    ViewData["Title"] = "Historia meczów";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+    html, body {
+        font-family: 'Inter', Arial, sans-serif;
+        background: #fafbfc;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile-header {
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+        .profile-header img {
+            border-radius: 50%;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            width: 90px;
+            height: 90px;
+        }
+
+        .profile-header h2 {
+            font-weight: 600;
+            font-size: 2rem;
+            margin: 1rem 0 0.5rem 0;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+    .matches-container {
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+    }
+
+    .match-bar {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 14px;
+        margin-bottom: 1.5rem;
+        padding: 1.3rem 1.5rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        border-left: 7px solid;
+        transition: box-shadow 0.2s;
+    }
+
+        .match-bar.win {
+            border-color: #4caf50;
+            background: linear-gradient(90deg, #e8fbe8 0%, #ffffff 100%);
+        }
+
+        .match-bar.lose {
+            border-color: #f44336;
+            background: linear-gradient(90deg, #ffeaea 0%, #ffffff 100%);
+        }
+
+        .match-bar img {
+            margin-right: 1.7rem;
+            border-radius: 10px;
+            background: #eee;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+    .match-info {
+        flex: 1;
+        font-size: 1.08rem;
+    }
+
+        .match-info strong {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #222;
+        }
+
+    .kda {
+        font-weight: 500;
+        color: #444;
+        margin-bottom: 0.2rem;
+    }
+
+    .kda-value {
+        font-size: 0.98rem;
+        color: #888;
+        margin-bottom: 0.2rem;
+    }
+
+    .match-result {
+        font-weight: 600;
+        font-size: 1.08rem;
+        padding: 0.4rem 1.3rem;
+        border-radius: 20px;
+        color: #fff;
+        margin-left: 1.2rem;
+        min-width: 110px;
+        text-align: center;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        letter-spacing: 0.5px;
+    }
+
+        .match-result.win {
+            background: #4caf50;
+        }
+
+        .match-result.lose {
+            background: #f44336;
+        }
+
+    .no-data {
+        text-align: center;
+        margin-top: 2rem;
+        color: #888;
+        font-size: 1.1rem;
+    }
+</style>
+
+@if (Model.AccountName != null)
+{
+    <div class="profile-header">
+        <img src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/profileicon/@(Model.ProfileIconId).png" />
+        <h2>@Model.AccountName#@Model.TagLine</h2>
+        <p>Poziom: @Model.SummonerLevel</p>
+    </div>
+    <div class="matches-container">
+        @foreach (var match in Model.Matches)
+        {
+            string game_mode; 
+            if (match.GameMode == "CLASSIC")
+            {
+                game_mode = "Standard 5v5";
+            }
+            else
+            {
+                game_mode = "Bójka";
+            }
+
+
+            var isWin = match.Win;
+            double kda = match.Deaths == 0 ? match.Kills + match.Assists : (double)(match.Kills + match.Assists) / match.Deaths;
+            var matchDate = TimeZoneInfo.ConvertTime(
+            DateTimeOffset.FromUnixTimeMilliseconds(match.GameCreation).UtcDateTime,
+            TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time")
+            );
+            <div class="match-bar @(isWin ? "win" : "lose")">
+                <img src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/@(match.ChampionName).png"
+                     onerror="this.onerror=null;this.src='https://via.placeholder.com/64';" />
+                <div class="match-info">
+                    <div><strong>@match.ChampionName</strong></div>
+                    <div> @match.Kills / @match.Deaths / @match.Assists</div>
+                    <div class="kda-value">KDA: @(kda.ToString("0.00"))</div>
+                    <div>Tryb: @game_mode</div>
+                    <div>Czas gry: @(TimeSpan.FromSeconds(match.GameDuration).ToString(@"mm\:ss"))</div>
+                    <div>Data meczu: @matchDate.ToString("yyyy-MM-dd HH:mm")</div>
+                </div>
+                <div class="match-result @(isWin ? "win" : "lose")">
+                    @(isWin ? "Zwycięstwo" : "Porażka")
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="no-data">
+        <p>Brak danych do wyświetlenia.</p>
+    </div>
+}

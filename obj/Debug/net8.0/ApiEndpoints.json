@@ -1,0 +1,49 @@
+[
+  {
+    "ContainingType": "RiotStatsAPI.Controllers.HelloController",
+    "Method": "Get",
+    "RelativePath": "api/Hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiotStatsAPI.Controllers.RiotController",
+    "Method": "GetAccountAndSummoner",
+    "RelativePath": "api/Riot/account/{gameName}/{tagLine}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gameName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tagLine",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiotStatsAPI.Controllers.RiotController",
+    "Method": "RefreshRecentMatches",
+    "RelativePath": "api/Riot/refresh-matches/{puuid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "puuid",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

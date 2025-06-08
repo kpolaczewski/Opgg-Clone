@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using RiotStatsAPI.Data;
 using RiotStatsAPI.Models.Entities;
 using RiotStatsAPI.Services;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace RiotStatsAPI.Controllers
 {
@@ -70,18 +69,97 @@ namespace RiotStatsAPI.Controllers
                     existingSummoner = summoner;  // Set the existingSummoner to the newly created one
                 }
 
-                // Step 3: Return summoner data
                 return Ok(new
                 {
+                    Puuid = existingAccount.Puuid,
                     SummonerId = existingSummoner.SummonerId,
                     SummonerLevel = existingSummoner.SummonerLevel,
                     ProfileIconId = existingSummoner.ProfileIconId
                 });
+
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Error in GetAccountAndSummoner: {ex.Message}");
                 return StatusCode(500, new { error = "Failed to fetch account and summoner data", detail = ex.Message });
+            }
+        }
+
+        [HttpGet("refresh-matches/{puuid}")]
+        public async Task<IActionResult> RefreshRecentMatches(string puuid)
+        {
+            try
+            {
+                var account = await _dbContext.Accounts
+                    .FirstOrDefaultAsync(a => a.Puuid == puuid);
+                if (account == null)
+                {
+                    return NotFound(new { error = "Account not found", detail = "The account could not be found in the database." });
+                }
+
+                var latestMatchesIds = await _riotApiService.GetMatchIds(puuid, null, null, null, null, 0, 20);
+                if (latestMatchesIds == null || latestMatchesIds.Count == 0)
+                {
+                    return Ok(new { message = "No matches found." });
+                }
+
+                List<Matches> newMatches = new List<Matches>();
+                foreach (var matchId in latestMatchesIds)
+                {
+
+                    if (await _dbContext.Matches.AnyAsync(m => m.GameId == matchId)) continue;
+
+                    var matchDTO = await _riotApiService.GetMatch(matchId);
+
+                    var match = new Matches
+                    {
+                        AccountId = account.Id,
+                        GameId = matchDTO.MetaDataDto.MatchId,
+                        GameDuration = matchDTO.InfoDto.GameDuration,
+                        GameMode = matchDTO.InfoDto.GameMode,
+                        GameCreation = matchDTO.InfoDto.GameCreation,
+                        Kills = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Kills).FirstOrDefault(),
+                        Assists = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Assists).FirstOrDefault(),
+                        Deaths = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Deaths).FirstOrDefault(),
+                        Win = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Win).FirstOrDefault(),
+                        ChampionName = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.ChampionName).FirstOrDefault(),
+                        ChampionLevel = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.ChampionLevel).FirstOrDefault()
+                    };
+
+                    _dbContext.Matches.Add(match);
+                    newMatches.Add(match);
+                }
+
+                await _dbContext.SaveChangesAsync();
+
+                var displayedMatches = await _dbContext.Matches
+                    .Where(m => m.AccountId == account.Id)
+                    .OrderByDescending(m => m.GameCreation)
+                    .Take(20)
+                    .ToListAsync();
+
+                return Ok(new
+                {
+                    NewMatchCount = newMatches.Count,
+                    Matches = displayedMatches
+                });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error in RefreshRecentMatches: {ex.Message}");
+                return StatusCode(500, new { error = "Failed to refresh matches", detail = ex.Message });
             }
         }
     }
