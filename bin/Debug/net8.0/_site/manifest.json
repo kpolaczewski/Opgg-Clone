@@ -1,0 +1,616 @@
+{
+  "source_base_path": "C:/Users/stasi/Desktop/kopia",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotApiStats.Models.DTOs.ParticipantDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotApiStats.Models.DTOs.ParticipantDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotApiStats.Models.DTOs.ParticipantDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotApiStats.Models.DTOs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotApiStats.Models.DTOs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotApiStats.Models.DTOs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotApiStats.Pages.ErrorModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotApiStats.Pages.ErrorModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotApiStats.Pages.ErrorModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotApiStats.Pages.IndexModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotApiStats.Pages.IndexModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotApiStats.Pages.IndexModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotApiStats.Pages.PrivacyModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotApiStats.Pages.PrivacyModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotApiStats.Pages.PrivacyModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotApiStats.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotApiStats.Pages.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotApiStats.Pages",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Controllers.HelloController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Controllers.HelloController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Controllers.HelloController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Controllers.RiotController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Controllers.RiotController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Controllers.RiotController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Controllers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Controllers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Data.AppDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Data.AppDbContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Data.AppDbContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.AddSummonerEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.AddSummonerEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.AddSummonerEntity",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.AddSummonerEntity.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.FixedRelationships.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.FixedRelationships.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.FixedRelationships",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.FixedRelationships.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.InitialCreate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.InitialCreate",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.InitialCreate.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.InitialMigration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.InitialMigration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.InitialMigration",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.InitialMigration.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.MigrationAccount_sync.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.MigrationAccount_sync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.MigrationAccount_sync",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.MigrationAccount_sync.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.MigrationChampionLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.MigrationChampionLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.MigrationChampionLevel",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.MigrationChampionLevel.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.MigrationChampionName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.MigrationChampionName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.MigrationChampionName",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.MigrationChampionName.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.MigrationItems_Teamid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.MigrationItems_Teamid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.MigrationItems_Teamid",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.MigrationItems_Teamid.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.MigrationParticipant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.MigrationParticipant.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.MigrationParticipant",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.MigrationParticipant.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.MigrationParticipant_EDIT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.MigrationParticipant_EDIT.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.MigrationParticipant_EDIT",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.MigrationParticipant_EDIT.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.MigrationParticipant_type_change.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.MigrationParticipant_type_change.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.MigrationParticipant_type_change",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.MigrationParticipant_type_change.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.UpdateSummonerEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.UpdateSummonerEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations.UpdateSummonerEntity",
+      "Summary": "<p sourcefile=\"api/RiotStatsAPI.Migrations.UpdateSummonerEntity.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.DTOs.AccountDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.DTOs.AccountDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.DTOs.AccountDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.DTOs.InfoDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.DTOs.InfoDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.DTOs.InfoDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.DTOs.MatchDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.DTOs.MatchDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.DTOs.MatchDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.DTOs.MetaDataDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.DTOs.MetaDataDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.DTOs.MetaDataDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.DTOs.SummonerDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.DTOs.SummonerDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.DTOs.SummonerDto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.DTOs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.DTOs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.DTOs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.Entities.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.Entities.Account.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.Entities.Account",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.Entities.Matches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.Entities.Matches.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.Entities.Matches",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.Entities.Participant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.Entities.Participant.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.Entities.Participant",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.Entities.Summoner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.Entities.Summoner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.Entities.Summoner",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Models.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Models.Entities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Models.Entities",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Services.RiotApiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Services.RiotApiService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Services.RiotApiService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RiotStatsAPI.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RiotStatsAPI.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RiotStatsAPI.Services",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

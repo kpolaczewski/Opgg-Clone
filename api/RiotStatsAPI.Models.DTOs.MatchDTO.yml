@@ -1,0 +1,404 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotStatsAPI.Models.DTOs.MatchDTO
+  commentId: T:RiotStatsAPI.Models.DTOs.MatchDTO
+  id: MatchDTO
+  parent: RiotStatsAPI.Models.DTOs
+  children:
+  - RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto
+  - RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto
+  langs:
+  - csharp
+  - vb
+  name: MatchDTO
+  nameWithType: MatchDTO
+  fullName: RiotStatsAPI.Models.DTOs.MatchDTO
+  type: Class
+  source:
+    id: MatchDTO
+    path: C:\Users\stasi\Desktop\kopia\Models\DTOs\MatchDTO.cs
+    startLine: 4
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.DTOs
+  syntax:
+    content: public class MatchDTO
+    content.vb: Public Class MatchDTO
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto
+  commentId: P:RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto
+  id: MetaDataDto
+  parent: RiotStatsAPI.Models.DTOs.MatchDTO
+  langs:
+  - csharp
+  - vb
+  name: MetaDataDto
+  nameWithType: MatchDTO.MetaDataDto
+  fullName: RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto
+  type: Property
+  source:
+    id: MetaDataDto
+    path: C:\Users\stasi\Desktop\kopia\Models\DTOs\MatchDTO.cs
+    startLine: 6
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.DTOs
+  syntax:
+    content: >-
+      [JsonProperty("metadata")]
+
+      public MetaDataDTO MetaDataDto { get; set; }
+    parameters: []
+    return:
+      type: RiotStatsAPI.Models.DTOs.MetaDataDTO
+    content.vb: >-
+      <JsonProperty("metadata")>
+
+      Public Property MetaDataDto As MetaDataDTO
+  overload: RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: metadata
+- uid: RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto
+  commentId: P:RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto
+  id: InfoDto
+  parent: RiotStatsAPI.Models.DTOs.MatchDTO
+  langs:
+  - csharp
+  - vb
+  name: InfoDto
+  nameWithType: MatchDTO.InfoDto
+  fullName: RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto
+  type: Property
+  source:
+    id: InfoDto
+    path: C:\Users\stasi\Desktop\kopia\Models\DTOs\MatchDTO.cs
+    startLine: 9
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.DTOs
+  syntax:
+    content: >-
+      [JsonProperty("info")]
+
+      public InfoDTO InfoDto { get; set; }
+    parameters: []
+    return:
+      type: RiotStatsAPI.Models.DTOs.InfoDTO
+    content.vb: >-
+      <JsonProperty("info")>
+
+      Public Property InfoDto As InfoDTO
+  overload: RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: info
+references:
+- uid: RiotStatsAPI.Models.DTOs
+  commentId: N:RiotStatsAPI.Models.DTOs
+  href: RiotStatsAPI.html
+  name: RiotStatsAPI.Models.DTOs
+  nameWithType: RiotStatsAPI.Models.DTOs
+  fullName: RiotStatsAPI.Models.DTOs
+  spec.csharp:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.DTOs
+    name: DTOs
+    href: RiotStatsAPI.Models.DTOs.html
+  spec.vb:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.DTOs
+    name: DTOs
+    href: RiotStatsAPI.Models.DTOs.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto*
+  commentId: Overload:RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto
+  href: RiotStatsAPI.Models.DTOs.MatchDTO.html#RiotStatsAPI_Models_DTOs_MatchDTO_MetaDataDto
+  name: MetaDataDto
+  nameWithType: MatchDTO.MetaDataDto
+  fullName: RiotStatsAPI.Models.DTOs.MatchDTO.MetaDataDto
+- uid: RiotStatsAPI.Models.DTOs.MetaDataDTO
+  commentId: T:RiotStatsAPI.Models.DTOs.MetaDataDTO
+  parent: RiotStatsAPI.Models.DTOs
+  href: RiotStatsAPI.Models.DTOs.MetaDataDTO.html
+  name: MetaDataDTO
+  nameWithType: MetaDataDTO
+  fullName: RiotStatsAPI.Models.DTOs.MetaDataDTO
+- uid: RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto*
+  commentId: Overload:RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto
+  href: RiotStatsAPI.Models.DTOs.MatchDTO.html#RiotStatsAPI_Models_DTOs_MatchDTO_InfoDto
+  name: InfoDto
+  nameWithType: MatchDTO.InfoDto
+  fullName: RiotStatsAPI.Models.DTOs.MatchDTO.InfoDto
+- uid: RiotStatsAPI.Models.DTOs.InfoDTO
+  commentId: T:RiotStatsAPI.Models.DTOs.InfoDTO
+  parent: RiotStatsAPI.Models.DTOs
+  href: RiotStatsAPI.Models.DTOs.InfoDTO.html
+  name: InfoDTO
+  nameWithType: InfoDTO
+  fullName: RiotStatsAPI.Models.DTOs.InfoDTO

@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotApiStats.Pages
+  commentId: N:RiotApiStats.Pages
+  id: RiotApiStats.Pages
+  children:
+  - RiotApiStats.Pages.ErrorModel
+  - RiotApiStats.Pages.IndexModel
+  - RiotApiStats.Pages.PrivacyModel
+  langs:
+  - csharp
+  - vb
+  name: RiotApiStats.Pages
+  nameWithType: RiotApiStats.Pages
+  fullName: RiotApiStats.Pages
+  type: Namespace
+  assemblies:
+  - RiotApiStats
+references:
+- uid: RiotApiStats.Pages.ErrorModel
+  commentId: T:RiotApiStats.Pages.ErrorModel
+  href: RiotApiStats.Pages.ErrorModel.html
+  name: ErrorModel
+  nameWithType: ErrorModel
+  fullName: RiotApiStats.Pages.ErrorModel
+- uid: RiotApiStats.Pages.IndexModel
+  commentId: T:RiotApiStats.Pages.IndexModel
+  href: RiotApiStats.Pages.IndexModel.html
+  name: IndexModel
+  nameWithType: IndexModel
+  fullName: RiotApiStats.Pages.IndexModel
+- uid: RiotApiStats.Pages.PrivacyModel
+  commentId: T:RiotApiStats.Pages.PrivacyModel
+  href: RiotApiStats.Pages.PrivacyModel.html
+  name: PrivacyModel
+  nameWithType: PrivacyModel
+  fullName: RiotApiStats.Pages.PrivacyModel

@@ -41,7 +41,7 @@
         }
 
     .matches-container {
-        max-width: 600px;
+        max-width: 1000px;
         margin: 0 auto 2rem auto;
     }
 
@@ -55,6 +55,8 @@
         box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         border-left: 7px solid;
         transition: box-shadow 0.2s;
+        min-width: 800px;
+        width: 100%;
     }
 
         .match-bar.win {
@@ -126,17 +128,122 @@
         color: #888;
         font-size: 1.1rem;
     }
+
+    .teams-row {
+        display: flex;
+        gap: 32px;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .team-column.win {
+        border-left: 7px solid #4caf50;
+        background: linear-gradient(90deg, #e8fbe8 0%, #ffffff 100%);
+    }
+
+    .team-column.lose {
+        border-left: 7px solid #f44336;
+        background: linear-gradient(90deg, #ffeaea 0%, #ffffff 100%);
+    }
+    .team-title {
+        font-weight: 600;
+        font-size: 1.08rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
+    }
+    .team-players {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .participant-card {
+        background: #fff;
+        border-radius: 8px;
+        padding: 8px 0;
+        margin-bottom: 2px;
+        text-align: center;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .champion-img {
+        border-radius: 6px;
+        background: #eee;
+    }
+    .participant-name {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    .kda {
+        color: #888;
+        font-size: 0.95rem;
+    }
+
+    .details-btn {
+        display: block;
+        margin: 0.7rem auto 0 auto;
+        padding: 0.5rem 1.5rem;
+        border-radius: 18px;
+        border: none;
+        background: #4f8cff;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .details-btn:hover {
+        background: #2563eb;
+    }
+
+    .items-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 0.5rem;
+    }
+    .items-row {
+        display: flex;
+        gap: 4px;
+    }
+    .item-icon {
+        border-radius: 6px;
+        background: #eee;
+        border: 1px solid #ccc;
+        opacity: 1;
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+    }
+    .item-icon[alt*="item0"],
+    .item-icon[alt*="item1"],
+    .item-icon[alt*="item2"],
+    .item-icon[alt*="item3"],
+    .item-icon[alt*="item4"],
+    .item-icon[alt*="item5"],
+    .item-icon[alt*="item6"] {
+        opacity: 1;
+    }
 </style>
 
-@if (Model.AccountName != null)
+@if (!String.IsNullOrWhiteSpace(Model.AccountName)) 
 {
     <div class="profile-header">
         <img src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/profileicon/@(Model.ProfileIconId).png" />
         <h2>@Model.AccountName#@Model.TagLine</h2>
         <p>Poziom: @Model.SummonerLevel</p>
     </div>
+    <div style="text-align:center; margin-bottom:2rem;">
+        <form method="get" style="display:inline-block;">
+            <input type="hidden" name="accountName" value="@Model.AccountName" />
+            <input type="hidden" name="tagLine" value="@Model.TagLine" />
+            <input type="text" name="championFilter" placeholder="Szukaj championa..." value="@Request.Query["championFilter"]" style="padding:0.7rem 1rem; border-radius:8px; border:1.5px solid #e0e4ea; font-size:1rem; width:200px;" />
+            <button type="submit" style="padding:0.7rem 1.5rem; border-radius:8px; border:none; background:#4f8cff; color:#fff; font-weight:600; margin-left:0.5rem;">Szukaj</button>
+        </form>
+    </div>
     <div class="matches-container">
-        @foreach (var match in Model.Matches)
+        @foreach (var match in Model.Matches
+            .Where(m => string.IsNullOrEmpty(Request.Query["championFilter"]) ||
+            m.ChampionName.Contains(Request.Query["championFilter"], StringComparison.OrdinalIgnoreCase)))
         {
             string game_mode; 
             if (match.GameMode == "CLASSIC")
@@ -156,22 +263,92 @@
             TimeZoneInfo.FindSystemTimeZoneById("Central European Standard Time")
             );
             <div class="match-bar @(isWin ? "win" : "lose")">
-                <img src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/@(match.ChampionName).png"
+                <!-- Ikona championa -->
+                <img class="champion-icon"
+                     src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/@(match.ChampionName).png"
                      onerror="this.onerror=null;this.src='https://via.placeholder.com/64';" />
                 <div class="match-info">
                     <div><strong>@match.ChampionName</strong></div>
                     <div> @match.Kills / @match.Deaths / @match.Assists</div>
                     <div class="kda-value">KDA: @(kda.ToString("0.00"))</div>
+                    <!-- Przedmioty -->
+                    <div class="items-grid">
+                        <div class="items-row">
+                            <img class="item-icon" src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/item/@(match.Item0 != 0 ? match.Item0.ToString() : "7050").png" alt="item0" />
+                            <img class="item-icon" src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/item/@(match.Item1 != 0 ? match.Item1.ToString() : "7050").png" alt="item1" />
+                            <img class="item-icon" src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/item/@(match.Item2 != 0 ? match.Item2.ToString() : "7050").png" alt="item2" />
+                            <img class="item-icon" src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/item/@(match.Item6 != 0 ? match.Item6.ToString() : "7050").png" alt="item6" />
+                        </div>
+                        <div class="items-row">
+                            <img class="item-icon" src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/item/@(match.Item4 != 0 ? match.Item4.ToString() : "7050").png" alt="item4" />
+                            <img class="item-icon" src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/item/@(match.Item5 != 0 ? match.Item5.ToString() : "7050").png" alt="item5" />
+                            <img class="item-icon" src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/item/@(match.Item3 != 0 ? match.Item3.ToString() : "7050").png" alt="item3" />                      
+                        </div>
+                    </div>
                     <div>Tryb: @game_mode</div>
                     <div>Czas gry: @(TimeSpan.FromSeconds(match.GameDuration).ToString(@"mm\:ss"))</div>
                     <div>Data meczu: @matchDate.ToString("yyyy-MM-dd HH:mm")</div>
                 </div>
                 <div class="match-result @(isWin ? "win" : "lose")">
                     @(isWin ? "Zwycięstwo" : "Porażka")
+                    <button type="button" class="details-btn" onclick="toggleDetails('@match.GameId', this, '@match.TeamId')">Więcej szczegółów</button>
                 </div>
             </div>
+            <div class="participants-details" id="details-@match.GameId" style="display:none; margin-bottom:1.5rem;"></div>
         }
     </div>
+
+    <script>
+        async function toggleDetails(gameId, btn, userTeamId) {
+            const detailsDiv = document.getElementById('details-' + gameId);
+            if (detailsDiv.style.display === 'none') {
+                if (!detailsDiv.innerHTML.trim()) {
+                    const resp = await fetch(`/api/riot/match-participants/${gameId}`);
+                    const data = await resp.json();
+
+                    // Grupuj po teamId
+                    const teams = {};
+                    data.forEach(p => {
+                        if (!teams[p.teamId]) teams[p.teamId] = [];
+                        teams[p.teamId].push(p);
+                    });
+
+                    // Ustaw kolejność drużyn (np. 100, 200)
+                    const teamIds = Object.keys(teams).sort();                          
+                            let html = `<div class="teams-row">`;
+                            teamIds.forEach(teamId => {
+                                let columnClass = "team-column";
+                                if (parseInt(teamId) === parseInt(userTeamId)) {
+                                    const isWin = teams[teamId][0].win === true || teams[teamId][0].win === "true";
+                                    columnClass += isWin ? " win" : " lose";                                  
+                                }
+                                const teamName = (parseInt(teamId) === 100) ? "Drużyna Niebieska" : (parseInt(teamId) === 200) ? "Drużyna Czerwona" : `Drużyna ${teamId}`;
+                                html += `<div class="${columnClass}">
+                                    <div class="team-title">${teamName}</div>
+                                    <div class="team-players">`;
+                                teams[teamId].forEach(p => {
+                                    html += `
+                                        <div class="participant-card">
+                                            <img src="https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/${p.championName}.png" width="48" height="48" class="champion-img" onerror="this.onerror=null;this.src='https://via.placeholder.com/48';" /><br/>
+                                            <span class="participant-name">${p.riotIdGameName ?? p.championName}</span><br/>
+                                            <span>${p.kills} / ${p.deaths} / ${p.assists}</span><br/>
+                                            <span class="kda">KDA: ${Number(p.kda).toFixed(2)}</span>
+                                        </div>
+                                    `;
+                                });
+                                html += `</div></div>`;
+                            });
+                            html += `</div>`
+                    detailsDiv.innerHTML = html;
+                }
+                detailsDiv.style.display = 'block';
+                btn.textContent = 'Ukryj szczegóły';
+            } else {
+                detailsDiv.style.display = 'none';
+                btn.textContent = 'Więcej szczegółów';
+            }
+        }
+    </script>
 }
 else
 {

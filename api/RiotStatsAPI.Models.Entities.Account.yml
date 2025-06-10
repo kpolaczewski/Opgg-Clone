@@ -1,0 +1,610 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotStatsAPI.Models.Entities.Account
+  commentId: T:RiotStatsAPI.Models.Entities.Account
+  id: Account
+  parent: RiotStatsAPI.Models.Entities
+  children:
+  - RiotStatsAPI.Models.Entities.Account.GameName
+  - RiotStatsAPI.Models.Entities.Account.GameTag
+  - RiotStatsAPI.Models.Entities.Account.Id
+  - RiotStatsAPI.Models.Entities.Account.Puuid
+  - RiotStatsAPI.Models.Entities.Account.Summoner
+  - RiotStatsAPI.Models.Entities.Account.lastSynced
+  langs:
+  - csharp
+  - vb
+  name: Account
+  nameWithType: Account
+  fullName: RiotStatsAPI.Models.Entities.Account
+  type: Class
+  source:
+    id: Account
+    path: C:\Users\stasi\Desktop\kopia\Models\Entities\Account.cs
+    startLine: 4
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.Entities
+  syntax:
+    content: public class Account
+    content.vb: Public Class Account
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RiotStatsAPI.Models.Entities.Account.Id
+  commentId: P:RiotStatsAPI.Models.Entities.Account.Id
+  id: Id
+  parent: RiotStatsAPI.Models.Entities.Account
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Account.Id
+  fullName: RiotStatsAPI.Models.Entities.Account.Id
+  type: Property
+  source:
+    id: Id
+    path: C:\Users\stasi\Desktop\kopia\Models\Entities\Account.cs
+    startLine: 6
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.Entities
+  syntax:
+    content: public long Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property Id As Long
+  overload: RiotStatsAPI.Models.Entities.Account.Id*
+- uid: RiotStatsAPI.Models.Entities.Account.lastSynced
+  commentId: P:RiotStatsAPI.Models.Entities.Account.lastSynced
+  id: lastSynced
+  parent: RiotStatsAPI.Models.Entities.Account
+  langs:
+  - csharp
+  - vb
+  name: lastSynced
+  nameWithType: Account.lastSynced
+  fullName: RiotStatsAPI.Models.Entities.Account.lastSynced
+  type: Property
+  source:
+    id: lastSynced
+    path: C:\Users\stasi\Desktop\kopia\Models\Entities\Account.cs
+    startLine: 7
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.Entities
+  syntax:
+    content: public DateTime? lastSynced { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property lastSynced As Date?
+  overload: RiotStatsAPI.Models.Entities.Account.lastSynced*
+- uid: RiotStatsAPI.Models.Entities.Account.Puuid
+  commentId: P:RiotStatsAPI.Models.Entities.Account.Puuid
+  id: Puuid
+  parent: RiotStatsAPI.Models.Entities.Account
+  langs:
+  - csharp
+  - vb
+  name: Puuid
+  nameWithType: Account.Puuid
+  fullName: RiotStatsAPI.Models.Entities.Account.Puuid
+  type: Property
+  source:
+    id: Puuid
+    path: C:\Users\stasi\Desktop\kopia\Models\Entities\Account.cs
+    startLine: 9
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.Entities
+  syntax:
+    content: >-
+      [JsonProperty("puuid")]
+
+      public string Puuid { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("puuid")>
+
+      Public Property Puuid As String
+  overload: RiotStatsAPI.Models.Entities.Account.Puuid*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: puuid
+- uid: RiotStatsAPI.Models.Entities.Account.GameName
+  commentId: P:RiotStatsAPI.Models.Entities.Account.GameName
+  id: GameName
+  parent: RiotStatsAPI.Models.Entities.Account
+  langs:
+  - csharp
+  - vb
+  name: GameName
+  nameWithType: Account.GameName
+  fullName: RiotStatsAPI.Models.Entities.Account.GameName
+  type: Property
+  source:
+    id: GameName
+    path: C:\Users\stasi\Desktop\kopia\Models\Entities\Account.cs
+    startLine: 12
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.Entities
+  syntax:
+    content: >-
+      [JsonProperty("gameName")]
+
+      public string? GameName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("gameName")>
+
+      Public Property GameName As String
+  overload: RiotStatsAPI.Models.Entities.Account.GameName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: gameName
+- uid: RiotStatsAPI.Models.Entities.Account.GameTag
+  commentId: P:RiotStatsAPI.Models.Entities.Account.GameTag
+  id: GameTag
+  parent: RiotStatsAPI.Models.Entities.Account
+  langs:
+  - csharp
+  - vb
+  name: GameTag
+  nameWithType: Account.GameTag
+  fullName: RiotStatsAPI.Models.Entities.Account.GameTag
+  type: Property
+  source:
+    id: GameTag
+    path: C:\Users\stasi\Desktop\kopia\Models\Entities\Account.cs
+    startLine: 15
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.Entities
+  syntax:
+    content: >-
+      [JsonProperty("tagLine")]
+
+      public string? GameTag { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("tagLine")>
+
+      Public Property GameTag As String
+  overload: RiotStatsAPI.Models.Entities.Account.GameTag*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: tagLine
+- uid: RiotStatsAPI.Models.Entities.Account.Summoner
+  commentId: P:RiotStatsAPI.Models.Entities.Account.Summoner
+  id: Summoner
+  parent: RiotStatsAPI.Models.Entities.Account
+  langs:
+  - csharp
+  - vb
+  name: Summoner
+  nameWithType: Account.Summoner
+  fullName: RiotStatsAPI.Models.Entities.Account.Summoner
+  type: Property
+  source:
+    id: Summoner
+    path: C:\Users\stasi\Desktop\kopia\Models\Entities\Account.cs
+    startLine: 18
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Models.Entities
+  syntax:
+    content: public Summoner? Summoner { get; set; }
+    parameters: []
+    return:
+      type: RiotStatsAPI.Models.Entities.Summoner
+    content.vb: Public Property Summoner As Summoner
+  overload: RiotStatsAPI.Models.Entities.Account.Summoner*
+references:
+- uid: RiotStatsAPI.Models.Entities
+  commentId: N:RiotStatsAPI.Models.Entities
+  href: RiotStatsAPI.html
+  name: RiotStatsAPI.Models.Entities
+  nameWithType: RiotStatsAPI.Models.Entities
+  fullName: RiotStatsAPI.Models.Entities
+  spec.csharp:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.Entities
+    name: Entities
+    href: RiotStatsAPI.Models.Entities.html
+  spec.vb:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.Entities
+    name: Entities
+    href: RiotStatsAPI.Models.Entities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RiotStatsAPI.Models.Entities.Account.Id*
+  commentId: Overload:RiotStatsAPI.Models.Entities.Account.Id
+  href: RiotStatsAPI.Models.Entities.Account.html#RiotStatsAPI_Models_Entities_Account_Id
+  name: Id
+  nameWithType: Account.Id
+  fullName: RiotStatsAPI.Models.Entities.Account.Id
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: RiotStatsAPI.Models.Entities.Account.lastSynced*
+  commentId: Overload:RiotStatsAPI.Models.Entities.Account.lastSynced
+  href: RiotStatsAPI.Models.Entities.Account.html#RiotStatsAPI_Models_Entities_Account_lastSynced
+  name: lastSynced
+  nameWithType: Account.lastSynced
+  fullName: RiotStatsAPI.Models.Entities.Account.lastSynced
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: RiotStatsAPI.Models.Entities.Account.Puuid*
+  commentId: Overload:RiotStatsAPI.Models.Entities.Account.Puuid
+  href: RiotStatsAPI.Models.Entities.Account.html#RiotStatsAPI_Models_Entities_Account_Puuid
+  name: Puuid
+  nameWithType: Account.Puuid
+  fullName: RiotStatsAPI.Models.Entities.Account.Puuid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RiotStatsAPI.Models.Entities.Account.GameName*
+  commentId: Overload:RiotStatsAPI.Models.Entities.Account.GameName
+  href: RiotStatsAPI.Models.Entities.Account.html#RiotStatsAPI_Models_Entities_Account_GameName
+  name: GameName
+  nameWithType: Account.GameName
+  fullName: RiotStatsAPI.Models.Entities.Account.GameName
+- uid: RiotStatsAPI.Models.Entities.Account.GameTag*
+  commentId: Overload:RiotStatsAPI.Models.Entities.Account.GameTag
+  href: RiotStatsAPI.Models.Entities.Account.html#RiotStatsAPI_Models_Entities_Account_GameTag
+  name: GameTag
+  nameWithType: Account.GameTag
+  fullName: RiotStatsAPI.Models.Entities.Account.GameTag
+- uid: RiotStatsAPI.Models.Entities.Account.Summoner*
+  commentId: Overload:RiotStatsAPI.Models.Entities.Account.Summoner
+  href: RiotStatsAPI.Models.Entities.Account.html#RiotStatsAPI_Models_Entities_Account_Summoner
+  name: Summoner
+  nameWithType: Account.Summoner
+  fullName: RiotStatsAPI.Models.Entities.Account.Summoner
+- uid: RiotStatsAPI.Models.Entities.Summoner
+  commentId: T:RiotStatsAPI.Models.Entities.Summoner
+  parent: RiotStatsAPI.Models.Entities
+  href: RiotStatsAPI.Models.Entities.Summoner.html
+  name: Summoner
+  nameWithType: Summoner
+  fullName: RiotStatsAPI.Models.Entities.Summoner

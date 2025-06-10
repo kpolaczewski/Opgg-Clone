@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 
 public class MatchHistoryModel : PageModel
 {
@@ -54,6 +55,15 @@ public class MatchHistoryModel : PageModel
         public long GameDuration { get; set; }
         public long GameCreation { get; set; }
         public string GameMode { get; set; }
+        public int Item0 { get; set; }
+        public int Item1 { get; set; }
+        public int Item2 { get; set; }
+        public int Item3 { get; set; }
+        public int Item4 { get; set; }
+        public int Item5 { get; set; }
+        public int Item6 { get; set; }
+        public int TeamId { get; set; }
+        public string GameId { get; set; }
     }
 
     public class MatchesResponse

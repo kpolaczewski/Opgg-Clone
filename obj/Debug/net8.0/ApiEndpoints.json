@@ -32,6 +32,22 @@
   },
   {
     "ContainingType": "RiotStatsAPI.Controllers.RiotController",
+    "Method": "GetMatchParticipants",
+    "RelativePath": "api/Riot/match-participants/{gameId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "gameId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiotStatsAPI.Controllers.RiotController",
     "Method": "RefreshRecentMatches",
     "RelativePath": "api/Riot/refresh-matches/{puuid}",
     "HttpMethod": "GET",

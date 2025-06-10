@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotStatsAPI.Services
+  commentId: N:RiotStatsAPI.Services
+  id: RiotStatsAPI.Services
+  children:
+  - RiotStatsAPI.Services.RiotApiService
+  langs:
+  - csharp
+  - vb
+  name: RiotStatsAPI.Services
+  nameWithType: RiotStatsAPI.Services
+  fullName: RiotStatsAPI.Services
+  type: Namespace
+  assemblies:
+  - RiotApiStats
+references:
+- uid: RiotStatsAPI.Services.RiotApiService
+  commentId: T:RiotStatsAPI.Services.RiotApiService
+  parent: RiotStatsAPI.Services
+  href: RiotStatsAPI.Services.RiotApiService.html
+  name: RiotApiService
+  nameWithType: RiotApiService
+  fullName: RiotStatsAPI.Services.RiotApiService
+- uid: RiotStatsAPI.Services
+  commentId: N:RiotStatsAPI.Services
+  href: RiotStatsAPI.html
+  name: RiotStatsAPI.Services
+  nameWithType: RiotStatsAPI.Services
+  fullName: RiotStatsAPI.Services
+  spec.csharp:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Services
+    name: Services
+    href: RiotStatsAPI.Services.html
+  spec.vb:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Services
+    name: Services
+    href: RiotStatsAPI.Services.html

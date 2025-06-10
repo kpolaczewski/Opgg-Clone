@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotStatsAPI.Models.DTOs
+  commentId: N:RiotStatsAPI.Models.DTOs
+  id: RiotStatsAPI.Models.DTOs
+  children:
+  - RiotStatsAPI.Models.DTOs.AccountDTO
+  - RiotStatsAPI.Models.DTOs.InfoDTO
+  - RiotStatsAPI.Models.DTOs.MatchDTO
+  - RiotStatsAPI.Models.DTOs.MetaDataDTO
+  - RiotStatsAPI.Models.DTOs.SummonerDto
+  langs:
+  - csharp
+  - vb
+  name: RiotStatsAPI.Models.DTOs
+  nameWithType: RiotStatsAPI.Models.DTOs
+  fullName: RiotStatsAPI.Models.DTOs
+  type: Namespace
+  assemblies:
+  - RiotApiStats
+references:
+- uid: RiotStatsAPI.Models.DTOs.AccountDTO
+  commentId: T:RiotStatsAPI.Models.DTOs.AccountDTO
+  href: RiotStatsAPI.Models.DTOs.AccountDTO.html
+  name: AccountDTO
+  nameWithType: AccountDTO
+  fullName: RiotStatsAPI.Models.DTOs.AccountDTO
+- uid: RiotStatsAPI.Models.DTOs.InfoDTO
+  commentId: T:RiotStatsAPI.Models.DTOs.InfoDTO
+  parent: RiotStatsAPI.Models.DTOs
+  href: RiotStatsAPI.Models.DTOs.InfoDTO.html
+  name: InfoDTO
+  nameWithType: InfoDTO
+  fullName: RiotStatsAPI.Models.DTOs.InfoDTO
+- uid: RiotStatsAPI.Models.DTOs.MatchDTO
+  commentId: T:RiotStatsAPI.Models.DTOs.MatchDTO
+  href: RiotStatsAPI.Models.DTOs.MatchDTO.html
+  name: MatchDTO
+  nameWithType: MatchDTO
+  fullName: RiotStatsAPI.Models.DTOs.MatchDTO
+- uid: RiotStatsAPI.Models.DTOs.MetaDataDTO
+  commentId: T:RiotStatsAPI.Models.DTOs.MetaDataDTO
+  parent: RiotStatsAPI.Models.DTOs
+  href: RiotStatsAPI.Models.DTOs.MetaDataDTO.html
+  name: MetaDataDTO
+  nameWithType: MetaDataDTO
+  fullName: RiotStatsAPI.Models.DTOs.MetaDataDTO
+- uid: RiotStatsAPI.Models.DTOs.SummonerDto
+  commentId: T:RiotStatsAPI.Models.DTOs.SummonerDto
+  href: RiotStatsAPI.Models.DTOs.SummonerDto.html
+  name: SummonerDto
+  nameWithType: SummonerDto
+  fullName: RiotStatsAPI.Models.DTOs.SummonerDto
+- uid: RiotStatsAPI.Models.DTOs
+  commentId: N:RiotStatsAPI.Models.DTOs
+  href: RiotStatsAPI.html
+  name: RiotStatsAPI.Models.DTOs
+  nameWithType: RiotStatsAPI.Models.DTOs
+  fullName: RiotStatsAPI.Models.DTOs
+  spec.csharp:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.DTOs
+    name: DTOs
+    href: RiotStatsAPI.Models.DTOs.html
+  spec.vb:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.DTOs
+    name: DTOs
+    href: RiotStatsAPI.Models.DTOs.html

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotApiStats.Models.DTOs
+  commentId: N:RiotApiStats.Models.DTOs
+  id: RiotApiStats.Models.DTOs
+  children:
+  - RiotApiStats.Models.DTOs.ParticipantDTO
+  langs:
+  - csharp
+  - vb
+  name: RiotApiStats.Models.DTOs
+  nameWithType: RiotApiStats.Models.DTOs
+  fullName: RiotApiStats.Models.DTOs
+  type: Namespace
+  assemblies:
+  - RiotApiStats
+references:
+- uid: RiotApiStats.Models.DTOs.ParticipantDTO
+  commentId: T:RiotApiStats.Models.DTOs.ParticipantDTO
+  href: RiotApiStats.Models.DTOs.ParticipantDTO.html
+  name: ParticipantDTO
+  nameWithType: ParticipantDTO
+  fullName: RiotApiStats.Models.DTOs.ParticipantDTO

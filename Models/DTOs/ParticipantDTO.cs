@@ -7,6 +7,9 @@ namespace RiotApiStats.Models.DTOs
         [JsonProperty("championName")]
         public string ChampionName { get; set; }
 
+        [JsonProperty("riotIdGameName")]
+        public string RiotIdGameName { get; set; }
+
         [JsonProperty("assists")]
         public int Assists { get; set; }
 
@@ -46,6 +49,9 @@ namespace RiotApiStats.Models.DTOs
 
         [JsonProperty("item6")]
         public int Item6 { get; set; }
+
+        [JsonProperty("teamId")]
+        public int TeamId { get; set; }
 
     }
 }

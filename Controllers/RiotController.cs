@@ -30,7 +30,7 @@ namespace RiotStatsAPI.Controllers
                 // Step 1: Check if account exists in the DB
                 var existingAccount = await _dbContext.Accounts
                     .FirstOrDefaultAsync(a => a.GameName == gameName && a.GameTag == tagLine);
-
+                       
                 if (existingAccount == null)
                 {
                     // Account not found in DB, fetch from Riot API
@@ -97,13 +97,19 @@ namespace RiotStatsAPI.Controllers
                     return NotFound(new { error = "Account not found", detail = "The account could not be found in the database." });
                 }
 
-                var latestMatchesIds = await _riotApiService.GetMatchIds(puuid, null, null, null, null, 0, 20);
-                if (latestMatchesIds == null || latestMatchesIds.Count == 0)
+                long? startTime = null;
+                if (account.lastSynced.HasValue)
                 {
-                    return Ok(new { message = "No matches found." });
+                    startTime = new DateTimeOffset(account.lastSynced.Value).ToUnixTimeSeconds();
                 }
 
+
+
+                var latestMatchesIds = await _riotApiService.GetMatchIds(puuid, startTime, null, null, null, 0, 20);
+
+
                 List<Matches> newMatches = new List<Matches>();
+
                 foreach (var matchId in latestMatchesIds)
                 {
 
@@ -118,28 +124,95 @@ namespace RiotStatsAPI.Controllers
                         GameDuration = matchDTO.InfoDto.GameDuration,
                         GameMode = matchDTO.InfoDto.GameMode,
                         GameCreation = matchDTO.InfoDto.GameCreation,
+
                         Kills = matchDTO.InfoDto.Participants
                             .Where(p => p.Puuid == puuid)
                             .Select(p => p.Kills).FirstOrDefault(),
+
                         Assists = matchDTO.InfoDto.Participants
                             .Where(p => p.Puuid == puuid)
                             .Select(p => p.Assists).FirstOrDefault(),
+
                         Deaths = matchDTO.InfoDto.Participants
                             .Where(p => p.Puuid == puuid)
                             .Select(p => p.Deaths).FirstOrDefault(),
+
                         Win = matchDTO.InfoDto.Participants
                             .Where(p => p.Puuid == puuid)
                             .Select(p => p.Win).FirstOrDefault(),
+
                         ChampionName = matchDTO.InfoDto.Participants
                             .Where(p => p.Puuid == puuid)
                             .Select(p => p.ChampionName).FirstOrDefault(),
+
                         ChampionLevel = matchDTO.InfoDto.Participants
                             .Where(p => p.Puuid == puuid)
-                            .Select(p => p.ChampionLevel).FirstOrDefault()
-                    };
+                            .Select(p => p.ChampionLevel).FirstOrDefault(),
 
+                        Item0 = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Item0).FirstOrDefault(),
+
+                        Item1 = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Item1).FirstOrDefault(),
+
+                        Item2 = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Item2).FirstOrDefault(),
+
+                        Item3 = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Item3).FirstOrDefault(),
+
+                        Item4 = matchDTO.InfoDto.Participants
+                        .Where(p => p.Puuid == puuid)
+                        .Select(p => p.Item4).FirstOrDefault(),
+
+                        Item5 = matchDTO.InfoDto.Participants
+                            .Where(p => p.Puuid == puuid)
+                            .Select(p => p.Item5).FirstOrDefault(),
+
+                        Item6 = matchDTO.InfoDto.Participants
+                        .Where(p => p.Puuid == puuid)
+                        .Select(p => p.Item6).FirstOrDefault()
+
+                    };
+                    foreach(var participantDto in matchDTO.InfoDto.Participants)
+                    {
+                        var participant = new Participant
+                        {
+                            ChampionName = participantDto.ChampionName,
+                            Assists = participantDto.Assists,
+                            Deaths = participantDto.Deaths,
+                            Kills = participantDto.Kills,
+                            Puuid = participantDto.Puuid,
+                            Win = participantDto.Win,
+                            RiotIdGameName = participantDto.RiotIdGameName,
+                            ChampionLevel = participantDto.ChampionLevel,
+                            Item0 = participantDto.Item0,
+                            Item1 = participantDto.Item1,
+                            Item2 = participantDto.Item2,
+                            Item3 = participantDto.Item3,
+                            Item4 = participantDto.Item4,
+                            Item5 = participantDto.Item5,
+                            Item6 = participantDto.Item6,
+                            TeamId = participantDto.TeamId,
+                            GameId = matchDTO.MetaDataDto.MatchId
+                        };
+
+                        _dbContext.Participants.Add(participant);
+                        
+                    }
+                    
                     _dbContext.Matches.Add(match);
                     newMatches.Add(match);
+
+                    if (newMatches.Count > 0)
+                    {
+                        account.lastSynced = DateTime.UtcNow;
+                        await _dbContext.SaveChangesAsync();
+                    }
                 }
 
                 await _dbContext.SaveChangesAsync();
@@ -152,8 +225,7 @@ namespace RiotStatsAPI.Controllers
 
                 return Ok(new
                 {
-                    NewMatchCount = newMatches.Count,
-                    Matches = displayedMatches
+                    Matches = displayedMatches,
                 });
             }
             catch (Exception ex)
@@ -162,5 +234,26 @@ namespace RiotStatsAPI.Controllers
                 return StatusCode(500, new { error = "Failed to refresh matches", detail = ex.Message });
             }
         }
+
+        [HttpGet("match-participants/{gameId}")]
+        public async Task<IActionResult> GetMatchParticipants(string gameId)
+        {
+            var participants = await _dbContext.Participants
+                .Where(p => p.GameId == gameId)
+                .Select(p => new
+                {
+                    p.ChampionName,
+                    p.Kills,
+                    p.Deaths,
+                    p.Assists,
+                    KDA = p.Deaths == 0 ? p.Kills + p.Assists : (double)(p.Kills + p.Assists) / p.Deaths,
+                    p.TeamId,
+                    p.RiotIdGameName
+                })
+                .ToListAsync();
+
+            return Ok(participants);
+        }
+
     }
 }

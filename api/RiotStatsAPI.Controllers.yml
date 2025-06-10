@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotStatsAPI.Controllers
+  commentId: N:RiotStatsAPI.Controllers
+  id: RiotStatsAPI.Controllers
+  children:
+  - RiotStatsAPI.Controllers.HelloController
+  - RiotStatsAPI.Controllers.RiotController
+  langs:
+  - csharp
+  - vb
+  name: RiotStatsAPI.Controllers
+  nameWithType: RiotStatsAPI.Controllers
+  fullName: RiotStatsAPI.Controllers
+  type: Namespace
+  assemblies:
+  - RiotApiStats
+references:
+- uid: RiotStatsAPI.Controllers.HelloController
+  commentId: T:RiotStatsAPI.Controllers.HelloController
+  href: RiotStatsAPI.Controllers.HelloController.html
+  name: HelloController
+  nameWithType: HelloController
+  fullName: RiotStatsAPI.Controllers.HelloController
+- uid: RiotStatsAPI.Controllers.RiotController
+  commentId: T:RiotStatsAPI.Controllers.RiotController
+  href: RiotStatsAPI.Controllers.RiotController.html
+  name: RiotController
+  nameWithType: RiotController
+  fullName: RiotStatsAPI.Controllers.RiotController

@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotStatsAPI.Models.Entities
+  commentId: N:RiotStatsAPI.Models.Entities
+  id: RiotStatsAPI.Models.Entities
+  children:
+  - RiotStatsAPI.Models.Entities.Account
+  - RiotStatsAPI.Models.Entities.Matches
+  - RiotStatsAPI.Models.Entities.Participant
+  - RiotStatsAPI.Models.Entities.Summoner
+  langs:
+  - csharp
+  - vb
+  name: RiotStatsAPI.Models.Entities
+  nameWithType: RiotStatsAPI.Models.Entities
+  fullName: RiotStatsAPI.Models.Entities
+  type: Namespace
+  assemblies:
+  - RiotApiStats
+references:
+- uid: RiotStatsAPI.Models.Entities.Account
+  commentId: T:RiotStatsAPI.Models.Entities.Account
+  parent: RiotStatsAPI.Models.Entities
+  href: RiotStatsAPI.Models.Entities.Account.html
+  name: Account
+  nameWithType: Account
+  fullName: RiotStatsAPI.Models.Entities.Account
+- uid: RiotStatsAPI.Models.Entities.Matches
+  commentId: T:RiotStatsAPI.Models.Entities.Matches
+  href: RiotStatsAPI.Models.Entities.Matches.html
+  name: Matches
+  nameWithType: Matches
+  fullName: RiotStatsAPI.Models.Entities.Matches
+- uid: RiotStatsAPI.Models.Entities.Participant
+  commentId: T:RiotStatsAPI.Models.Entities.Participant
+  href: RiotStatsAPI.Models.Entities.Participant.html
+  name: Participant
+  nameWithType: Participant
+  fullName: RiotStatsAPI.Models.Entities.Participant
+- uid: RiotStatsAPI.Models.Entities.Summoner
+  commentId: T:RiotStatsAPI.Models.Entities.Summoner
+  parent: RiotStatsAPI.Models.Entities
+  href: RiotStatsAPI.Models.Entities.Summoner.html
+  name: Summoner
+  nameWithType: Summoner
+  fullName: RiotStatsAPI.Models.Entities.Summoner
+- uid: RiotStatsAPI.Models.Entities
+  commentId: N:RiotStatsAPI.Models.Entities
+  href: RiotStatsAPI.html
+  name: RiotStatsAPI.Models.Entities
+  nameWithType: RiotStatsAPI.Models.Entities
+  fullName: RiotStatsAPI.Models.Entities
+  spec.csharp:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.Entities
+    name: Entities
+    href: RiotStatsAPI.Models.Entities.html
+  spec.vb:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Models
+    name: Models
+    href: RiotStatsAPI.Models.html
+  - name: .
+  - uid: RiotStatsAPI.Models.Entities
+    name: Entities
+    href: RiotStatsAPI.Models.Entities.html

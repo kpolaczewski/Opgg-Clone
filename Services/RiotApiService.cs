@@ -140,33 +140,10 @@ namespace RiotStatsAPI.Services
         {
             string url = $"https://europe.api.riotgames.com/lol/match/v5/matches/{matchId}";
 
-            var MatchDTO = await GetRiotApiData<MatchDTO>(url); // Added await here
+            var MatchDTO = await GetRiotApiData<MatchDTO>(url);
 
             await Task.Delay(1200);
             return MatchDTO;
-        }
-
-        public async Task<List<Matches>> GetMatchesAsync(string accountName, string tagLine)
-        {
-            // Replace this with your actual logic to fetch matches from DB or API
-            // Here's mock data for testing
-
-            var account = await _dbContext.Accounts
-                .FirstOrDefaultAsync(a => a.GameName == accountName && a.GameTag == tagLine);
-            if (account == null)
-            {
-                Console.WriteLine("Account not found!");
-                return new List<Matches>();
-            }
-
-
-            var displayedMatches = await _dbContext.Matches
-                    .Where(m => m.AccountId == account.Id)
-                    .OrderByDescending(m => m.GameCreation)
-                    .Take(20)
-                    .ToListAsync();
-
-            return displayedMatches;
         }
 
     }

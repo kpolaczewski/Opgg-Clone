@@ -1,0 +1,122 @@
+### YamlMime:TableOfContent
+items:
+- uid: RiotApiStats.Models.DTOs
+  name: RiotApiStats.Models.DTOs
+  type: Namespace
+  items:
+  - uid: RiotApiStats.Models.DTOs.ParticipantDTO
+    name: ParticipantDTO
+    type: Class
+- uid: RiotApiStats.Pages
+  name: RiotApiStats.Pages
+  type: Namespace
+  items:
+  - uid: RiotApiStats.Pages.ErrorModel
+    name: ErrorModel
+    type: Class
+  - uid: RiotApiStats.Pages.IndexModel
+    name: IndexModel
+    type: Class
+  - uid: RiotApiStats.Pages.PrivacyModel
+    name: PrivacyModel
+    type: Class
+- uid: RiotStatsAPI.Controllers
+  name: RiotStatsAPI.Controllers
+  type: Namespace
+  items:
+  - uid: RiotStatsAPI.Controllers.HelloController
+    name: HelloController
+    type: Class
+  - uid: RiotStatsAPI.Controllers.RiotController
+    name: RiotController
+    type: Class
+- uid: RiotStatsAPI.Data
+  name: RiotStatsAPI.Data
+  type: Namespace
+  items:
+  - uid: RiotStatsAPI.Data.AppDbContext
+    name: AppDbContext
+    type: Class
+- uid: RiotStatsAPI.Migrations
+  name: RiotStatsAPI.Migrations
+  type: Namespace
+  items:
+  - uid: RiotStatsAPI.Migrations.AddSummonerEntity
+    name: AddSummonerEntity
+    type: Class
+  - uid: RiotStatsAPI.Migrations.FixedRelationships
+    name: FixedRelationships
+    type: Class
+  - uid: RiotStatsAPI.Migrations.InitialCreate
+    name: InitialCreate
+    type: Class
+  - uid: RiotStatsAPI.Migrations.InitialMigration
+    name: InitialMigration
+    type: Class
+  - uid: RiotStatsAPI.Migrations.MigrationAccount_sync
+    name: MigrationAccount_sync
+    type: Class
+  - uid: RiotStatsAPI.Migrations.MigrationChampionLevel
+    name: MigrationChampionLevel
+    type: Class
+  - uid: RiotStatsAPI.Migrations.MigrationChampionName
+    name: MigrationChampionName
+    type: Class
+  - uid: RiotStatsAPI.Migrations.MigrationItems_Teamid
+    name: MigrationItems_Teamid
+    type: Class
+  - uid: RiotStatsAPI.Migrations.MigrationParticipant
+    name: MigrationParticipant
+    type: Class
+  - uid: RiotStatsAPI.Migrations.MigrationParticipant_EDIT
+    name: MigrationParticipant_EDIT
+    type: Class
+  - uid: RiotStatsAPI.Migrations.MigrationParticipant_type_change
+    name: MigrationParticipant_type_change
+    type: Class
+  - uid: RiotStatsAPI.Migrations.UpdateSummonerEntity
+    name: UpdateSummonerEntity
+    type: Class
+- uid: RiotStatsAPI.Models.DTOs
+  name: RiotStatsAPI.Models.DTOs
+  type: Namespace
+  items:
+  - uid: RiotStatsAPI.Models.DTOs.AccountDTO
+    name: AccountDTO
+    type: Class
+  - uid: RiotStatsAPI.Models.DTOs.InfoDTO
+    name: InfoDTO
+    type: Class
+  - uid: RiotStatsAPI.Models.DTOs.MatchDTO
+    name: MatchDTO
+    type: Class
+  - uid: RiotStatsAPI.Models.DTOs.MetaDataDTO
+    name: MetaDataDTO
+    type: Class
+  - uid: RiotStatsAPI.Models.DTOs.SummonerDto
+    name: SummonerDto
+    type: Class
+- uid: RiotStatsAPI.Models.Entities
+  name: RiotStatsAPI.Models.Entities
+  type: Namespace
+  items:
+  - uid: RiotStatsAPI.Models.Entities.Account
+    name: Account
+    type: Class
+  - uid: RiotStatsAPI.Models.Entities.Matches
+    name: Matches
+    type: Class
+  - uid: RiotStatsAPI.Models.Entities.Participant
+    name: Participant
+    type: Class
+  - uid: RiotStatsAPI.Models.Entities.Summoner
+    name: Summoner
+    type: Class
+- uid: RiotStatsAPI.Services
+  name: RiotStatsAPI.Services
+  type: Namespace
+  items:
+  - uid: RiotStatsAPI.Services.RiotApiService
+    name: RiotApiService
+    type: Class
+memberLayout: SamePage

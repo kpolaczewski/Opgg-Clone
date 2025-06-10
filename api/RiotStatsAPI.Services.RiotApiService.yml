@@ -1,0 +1,962 @@
+### YamlMime:ManagedReference
+items:
+- uid: RiotStatsAPI.Services.RiotApiService
+  commentId: T:RiotStatsAPI.Services.RiotApiService
+  id: RiotApiService
+  parent: RiotStatsAPI.Services
+  children:
+  - RiotStatsAPI.Services.RiotApiService.#ctor(System.Net.Http.HttpClient,System.String,RiotStatsAPI.Data.AppDbContext)
+  - RiotStatsAPI.Services.RiotApiService.GetAccount(System.String,System.String)
+  - RiotStatsAPI.Services.RiotApiService.GetMatch(System.String)
+  - RiotStatsAPI.Services.RiotApiService.GetMatchIds(System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32},System.String,System.Int32,System.Int32)
+  - RiotStatsAPI.Services.RiotApiService.GetRiotApiData``1(System.String)
+  - RiotStatsAPI.Services.RiotApiService.GetSummoner(System.String,System.Int64)
+  langs:
+  - csharp
+  - vb
+  name: RiotApiService
+  nameWithType: RiotApiService
+  fullName: RiotStatsAPI.Services.RiotApiService
+  type: Class
+  source:
+    id: RiotApiService
+    path: C:\Users\stasi\Desktop\kopia\Services\RiotApiService.cs
+    startLine: 10
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Services
+  syntax:
+    content: public class RiotApiService
+    content.vb: Public Class RiotApiService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RiotStatsAPI.Services.RiotApiService.#ctor(System.Net.Http.HttpClient,System.String,RiotStatsAPI.Data.AppDbContext)
+  commentId: M:RiotStatsAPI.Services.RiotApiService.#ctor(System.Net.Http.HttpClient,System.String,RiotStatsAPI.Data.AppDbContext)
+  id: '#ctor(System.Net.Http.HttpClient,System.String,RiotStatsAPI.Data.AppDbContext)'
+  parent: RiotStatsAPI.Services.RiotApiService
+  langs:
+  - csharp
+  - vb
+  name: RiotApiService(HttpClient, string, AppDbContext)
+  nameWithType: RiotApiService.RiotApiService(HttpClient, string, AppDbContext)
+  fullName: RiotStatsAPI.Services.RiotApiService.RiotApiService(System.Net.Http.HttpClient, string, RiotStatsAPI.Data.AppDbContext)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\stasi\Desktop\kopia\Services\RiotApiService.cs
+    startLine: 28
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Services
+  syntax:
+    content: public RiotApiService(HttpClient httpClient, string apiKey, AppDbContext dbContext)
+    parameters:
+    - id: httpClient
+      type: System.Net.Http.HttpClient
+    - id: apiKey
+      type: System.String
+    - id: dbContext
+      type: RiotStatsAPI.Data.AppDbContext
+    content.vb: Public Sub New(httpClient As HttpClient, apiKey As String, dbContext As AppDbContext)
+  overload: RiotStatsAPI.Services.RiotApiService.#ctor*
+  nameWithType.vb: RiotApiService.New(HttpClient, String, AppDbContext)
+  fullName.vb: RiotStatsAPI.Services.RiotApiService.New(System.Net.Http.HttpClient, String, RiotStatsAPI.Data.AppDbContext)
+  name.vb: New(HttpClient, String, AppDbContext)
+- uid: RiotStatsAPI.Services.RiotApiService.GetRiotApiData``1(System.String)
+  commentId: M:RiotStatsAPI.Services.RiotApiService.GetRiotApiData``1(System.String)
+  id: GetRiotApiData``1(System.String)
+  parent: RiotStatsAPI.Services.RiotApiService
+  langs:
+  - csharp
+  - vb
+  name: GetRiotApiData<T>(string)
+  nameWithType: RiotApiService.GetRiotApiData<T>(string)
+  fullName: RiotStatsAPI.Services.RiotApiService.GetRiotApiData<T>(string)
+  type: Method
+  source:
+    id: GetRiotApiData
+    path: C:\Users\stasi\Desktop\kopia\Services\RiotApiService.cs
+    startLine: 35
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Services
+  syntax:
+    content: public Task<T> GetRiotApiData<T>(string url)
+    parameters:
+    - id: url
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function GetRiotApiData(Of T)(url As String) As Task(Of T)
+  overload: RiotStatsAPI.Services.RiotApiService.GetRiotApiData*
+  nameWithType.vb: RiotApiService.GetRiotApiData(Of T)(String)
+  fullName.vb: RiotStatsAPI.Services.RiotApiService.GetRiotApiData(Of T)(String)
+  name.vb: GetRiotApiData(Of T)(String)
+- uid: RiotStatsAPI.Services.RiotApiService.GetAccount(System.String,System.String)
+  commentId: M:RiotStatsAPI.Services.RiotApiService.GetAccount(System.String,System.String)
+  id: GetAccount(System.String,System.String)
+  parent: RiotStatsAPI.Services.RiotApiService
+  langs:
+  - csharp
+  - vb
+  name: GetAccount(string, string)
+  nameWithType: RiotApiService.GetAccount(string, string)
+  fullName: RiotStatsAPI.Services.RiotApiService.GetAccount(string, string)
+  type: Method
+  source:
+    id: GetAccount
+    path: C:\Users\stasi\Desktop\kopia\Services\RiotApiService.cs
+    startLine: 69
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Services
+  syntax:
+    content: public Task<Account> GetAccount(string gameName, string tagLine)
+    parameters:
+    - id: gameName
+      type: System.String
+    - id: tagLine
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{RiotStatsAPI.Models.Entities.Account}
+    content.vb: Public Function GetAccount(gameName As String, tagLine As String) As Task(Of Account)
+  overload: RiotStatsAPI.Services.RiotApiService.GetAccount*
+  nameWithType.vb: RiotApiService.GetAccount(String, String)
+  fullName.vb: RiotStatsAPI.Services.RiotApiService.GetAccount(String, String)
+  name.vb: GetAccount(String, String)
+- uid: RiotStatsAPI.Services.RiotApiService.GetSummoner(System.String,System.Int64)
+  commentId: M:RiotStatsAPI.Services.RiotApiService.GetSummoner(System.String,System.Int64)
+  id: GetSummoner(System.String,System.Int64)
+  parent: RiotStatsAPI.Services.RiotApiService
+  langs:
+  - csharp
+  - vb
+  name: GetSummoner(string, long)
+  nameWithType: RiotApiService.GetSummoner(string, long)
+  fullName: RiotStatsAPI.Services.RiotApiService.GetSummoner(string, long)
+  type: Method
+  source:
+    id: GetSummoner
+    path: C:\Users\stasi\Desktop\kopia\Services\RiotApiService.cs
+    startLine: 89
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Services
+  syntax:
+    content: public Task<Summoner> GetSummoner(string puuid, long accountId)
+    parameters:
+    - id: puuid
+      type: System.String
+    - id: accountId
+      type: System.Int64
+    return:
+      type: System.Threading.Tasks.Task{RiotStatsAPI.Models.Entities.Summoner}
+    content.vb: Public Function GetSummoner(puuid As String, accountId As Long) As Task(Of Summoner)
+  overload: RiotStatsAPI.Services.RiotApiService.GetSummoner*
+  nameWithType.vb: RiotApiService.GetSummoner(String, Long)
+  fullName.vb: RiotStatsAPI.Services.RiotApiService.GetSummoner(String, Long)
+  name.vb: GetSummoner(String, Long)
+- uid: RiotStatsAPI.Services.RiotApiService.GetMatchIds(System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32},System.String,System.Int32,System.Int32)
+  commentId: M:RiotStatsAPI.Services.RiotApiService.GetMatchIds(System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32},System.String,System.Int32,System.Int32)
+  id: GetMatchIds(System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32},System.String,System.Int32,System.Int32)
+  parent: RiotStatsAPI.Services.RiotApiService
+  langs:
+  - csharp
+  - vb
+  name: GetMatchIds(string, long?, long?, int?, string?, int, int)
+  nameWithType: RiotApiService.GetMatchIds(string, long?, long?, int?, string?, int, int)
+  fullName: RiotStatsAPI.Services.RiotApiService.GetMatchIds(string, long?, long?, int?, string?, int, int)
+  type: Method
+  source:
+    id: GetMatchIds
+    path: C:\Users\stasi\Desktop\kopia\Services\RiotApiService.cs
+    startLine: 112
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Services
+  syntax:
+    content: public Task<List<string>> GetMatchIds(string puuid, long? startTime, long? endTime, int? queue, string? type, int start = 0, int count = 20)
+    parameters:
+    - id: puuid
+      type: System.String
+    - id: startTime
+      type: System.Nullable{System.Int64}
+    - id: endTime
+      type: System.Nullable{System.Int64}
+    - id: queue
+      type: System.Nullable{System.Int32}
+    - id: type
+      type: System.String
+    - id: start
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+    content.vb: Public Function GetMatchIds(puuid As String, startTime As Long?, endTime As Long?, queue As Integer?, type As String, start As Integer = 0, count As Integer = 20) As Task(Of List(Of String))
+  overload: RiotStatsAPI.Services.RiotApiService.GetMatchIds*
+  nameWithType.vb: RiotApiService.GetMatchIds(String, Long?, Long?, Integer?, String, Integer, Integer)
+  fullName.vb: RiotStatsAPI.Services.RiotApiService.GetMatchIds(String, Long?, Long?, Integer?, String, Integer, Integer)
+  name.vb: GetMatchIds(String, Long?, Long?, Integer?, String, Integer, Integer)
+- uid: RiotStatsAPI.Services.RiotApiService.GetMatch(System.String)
+  commentId: M:RiotStatsAPI.Services.RiotApiService.GetMatch(System.String)
+  id: GetMatch(System.String)
+  parent: RiotStatsAPI.Services.RiotApiService
+  langs:
+  - csharp
+  - vb
+  name: GetMatch(string)
+  nameWithType: RiotApiService.GetMatch(string)
+  fullName: RiotStatsAPI.Services.RiotApiService.GetMatch(string)
+  type: Method
+  source:
+    id: GetMatch
+    path: C:\Users\stasi\Desktop\kopia\Services\RiotApiService.cs
+    startLine: 138
+  assemblies:
+  - RiotApiStats
+  namespace: RiotStatsAPI.Services
+  syntax:
+    content: public Task<MatchDTO> GetMatch(string matchId)
+    parameters:
+    - id: matchId
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{RiotStatsAPI.Models.DTOs.MatchDTO}
+    content.vb: Public Function GetMatch(matchId As String) As Task(Of MatchDTO)
+  overload: RiotStatsAPI.Services.RiotApiService.GetMatch*
+  nameWithType.vb: RiotApiService.GetMatch(String)
+  fullName.vb: RiotStatsAPI.Services.RiotApiService.GetMatch(String)
+  name.vb: GetMatch(String)
+references:
+- uid: RiotStatsAPI.Services
+  commentId: N:RiotStatsAPI.Services
+  href: RiotStatsAPI.html
+  name: RiotStatsAPI.Services
+  nameWithType: RiotStatsAPI.Services
+  fullName: RiotStatsAPI.Services
+  spec.csharp:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Services
+    name: Services
+    href: RiotStatsAPI.Services.html
+  spec.vb:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Services
+    name: Services
+    href: RiotStatsAPI.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RiotStatsAPI.Services.RiotApiService.#ctor*
+  commentId: Overload:RiotStatsAPI.Services.RiotApiService.#ctor
+  href: RiotStatsAPI.Services.RiotApiService.html#RiotStatsAPI_Services_RiotApiService__ctor_System_Net_Http_HttpClient_System_String_RiotStatsAPI_Data_AppDbContext_
+  name: RiotApiService
+  nameWithType: RiotApiService.RiotApiService
+  fullName: RiotStatsAPI.Services.RiotApiService.RiotApiService
+  nameWithType.vb: RiotApiService.New
+  fullName.vb: RiotStatsAPI.Services.RiotApiService.New
+  name.vb: New
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RiotStatsAPI.Data.AppDbContext
+  commentId: T:RiotStatsAPI.Data.AppDbContext
+  parent: RiotStatsAPI.Data
+  href: RiotStatsAPI.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: RiotStatsAPI.Data.AppDbContext
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: RiotStatsAPI.Data
+  commentId: N:RiotStatsAPI.Data
+  href: RiotStatsAPI.html
+  name: RiotStatsAPI.Data
+  nameWithType: RiotStatsAPI.Data
+  fullName: RiotStatsAPI.Data
+  spec.csharp:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Data
+    name: Data
+    href: RiotStatsAPI.Data.html
+  spec.vb:
+  - uid: RiotStatsAPI
+    name: RiotStatsAPI
+    href: RiotStatsAPI.html
+  - name: .
+  - uid: RiotStatsAPI.Data
+    name: Data
+    href: RiotStatsAPI.Data.html
+- uid: RiotStatsAPI.Services.RiotApiService.GetRiotApiData*
+  commentId: Overload:RiotStatsAPI.Services.RiotApiService.GetRiotApiData
+  href: RiotStatsAPI.Services.RiotApiService.html#RiotStatsAPI_Services_RiotApiService_GetRiotApiData__1_System_String_
+  name: GetRiotApiData
+  nameWithType: RiotApiService.GetRiotApiData
+  fullName: RiotStatsAPI.Services.RiotApiService.GetRiotApiData
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: RiotStatsAPI.Services.RiotApiService.GetAccount*
+  commentId: Overload:RiotStatsAPI.Services.RiotApiService.GetAccount
+  href: RiotStatsAPI.Services.RiotApiService.html#RiotStatsAPI_Services_RiotApiService_GetAccount_System_String_System_String_
+  name: GetAccount
+  nameWithType: RiotApiService.GetAccount
+  fullName: RiotStatsAPI.Services.RiotApiService.GetAccount
+- uid: System.Threading.Tasks.Task{RiotStatsAPI.Models.Entities.Account}
+  commentId: T:System.Threading.Tasks.Task{RiotStatsAPI.Models.Entities.Account}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Account>
+  nameWithType: Task<Account>
+  fullName: System.Threading.Tasks.Task<RiotStatsAPI.Models.Entities.Account>
+  nameWithType.vb: Task(Of Account)
+  fullName.vb: System.Threading.Tasks.Task(Of RiotStatsAPI.Models.Entities.Account)
+  name.vb: Task(Of Account)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: RiotStatsAPI.Models.Entities.Account
+    name: Account
+    href: RiotStatsAPI.Models.Entities.Account.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RiotStatsAPI.Models.Entities.Account
+    name: Account
+    href: RiotStatsAPI.Models.Entities.Account.html
+  - name: )
+- uid: RiotStatsAPI.Services.RiotApiService.GetSummoner*
+  commentId: Overload:RiotStatsAPI.Services.RiotApiService.GetSummoner
+  href: RiotStatsAPI.Services.RiotApiService.html#RiotStatsAPI_Services_RiotApiService_GetSummoner_System_String_System_Int64_
+  name: GetSummoner
+  nameWithType: RiotApiService.GetSummoner
+  fullName: RiotStatsAPI.Services.RiotApiService.GetSummoner
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.Threading.Tasks.Task{RiotStatsAPI.Models.Entities.Summoner}
+  commentId: T:System.Threading.Tasks.Task{RiotStatsAPI.Models.Entities.Summoner}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Summoner>
+  nameWithType: Task<Summoner>
+  fullName: System.Threading.Tasks.Task<RiotStatsAPI.Models.Entities.Summoner>
+  nameWithType.vb: Task(Of Summoner)
+  fullName.vb: System.Threading.Tasks.Task(Of RiotStatsAPI.Models.Entities.Summoner)
+  name.vb: Task(Of Summoner)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: RiotStatsAPI.Models.Entities.Summoner
+    name: Summoner
+    href: RiotStatsAPI.Models.Entities.Summoner.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RiotStatsAPI.Models.Entities.Summoner
+    name: Summoner
+    href: RiotStatsAPI.Models.Entities.Summoner.html
+  - name: )
+- uid: RiotStatsAPI.Services.RiotApiService.GetMatchIds*
+  commentId: Overload:RiotStatsAPI.Services.RiotApiService.GetMatchIds
+  href: RiotStatsAPI.Services.RiotApiService.html#RiotStatsAPI_Services_RiotApiService_GetMatchIds_System_String_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__System_String_System_Int32_System_Int32_
+  name: GetMatchIds
+  nameWithType: RiotApiService.GetMatchIds
+  fullName: RiotStatsAPI.Services.RiotApiService.GetMatchIds
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<string>>
+  nameWithType: Task<List<string>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<string>>
+  nameWithType.vb: Task(Of List(Of String))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of String))
+  name.vb: Task(Of List(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: RiotStatsAPI.Services.RiotApiService.GetMatch*
+  commentId: Overload:RiotStatsAPI.Services.RiotApiService.GetMatch
+  href: RiotStatsAPI.Services.RiotApiService.html#RiotStatsAPI_Services_RiotApiService_GetMatch_System_String_
+  name: GetMatch
+  nameWithType: RiotApiService.GetMatch
+  fullName: RiotStatsAPI.Services.RiotApiService.GetMatch
+- uid: System.Threading.Tasks.Task{RiotStatsAPI.Models.DTOs.MatchDTO}
+  commentId: T:System.Threading.Tasks.Task{RiotStatsAPI.Models.DTOs.MatchDTO}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MatchDTO>
+  nameWithType: Task<MatchDTO>
+  fullName: System.Threading.Tasks.Task<RiotStatsAPI.Models.DTOs.MatchDTO>
+  nameWithType.vb: Task(Of MatchDTO)
+  fullName.vb: System.Threading.Tasks.Task(Of RiotStatsAPI.Models.DTOs.MatchDTO)
+  name.vb: Task(Of MatchDTO)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: RiotStatsAPI.Models.DTOs.MatchDTO
+    name: MatchDTO
+    href: RiotStatsAPI.Models.DTOs.MatchDTO.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RiotStatsAPI.Models.DTOs.MatchDTO
+    name: MatchDTO
+    href: RiotStatsAPI.Models.DTOs.MatchDTO.html
+  - name: )
